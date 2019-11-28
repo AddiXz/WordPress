@@ -54,6 +54,9 @@ define( 'DB_CHARSET', 'utf8' );
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
+/** Allow WP to repair the DB **/
+define('WP_ALLOW_REPAIR', true);
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
@@ -80,7 +83,7 @@ define( 'NONCE_SALT',       'put your unique phrase here' );
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = 'wp_';
+$table_prefix = 'SentiaWPDB_';
 
 /**
  * For developers: WordPress debugging mode.
