@@ -54,9 +54,6 @@ define( 'DB_CHARSET', 'utf8' );
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
-/** Allow WP to repair the DB **/
-define('WP_ALLOW_REPAIR', true);
-
 /**#@+
  * Authentication Unique Keys and Salts.
  *
@@ -97,7 +94,8 @@ $table_prefix = 'SentiaWPDB_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', true );
+define('WP_ALLOW_REPAIR', true);
 
 /* That's all, stop editing! Happy publishing. */
 
