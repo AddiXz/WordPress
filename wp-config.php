@@ -25,7 +25,6 @@ $connectstr_dbusername = '';
 $connectstr_dbpassword = '';
 
 foreach ($_SERVER as $key => $value) {
-    echo $key ;
  if (strpos($key, "MYSQLCONNSTR_defaultConnection") !== 0) {
  continue;
  }
