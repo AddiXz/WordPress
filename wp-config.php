@@ -24,7 +24,7 @@ $connectstr_dbname = '';
 $connectstr_dbusername = '';
 $connectstr_dbpassword = '';
 
-$value = getenv('MYSQLCONNSTR_bridgesConnection');
+$value = getenv('MYSQLCONNSTR_defaultConnection');
     
     $connectstr_dbhost = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
     $connectstr_dbname = preg_replace("/^.*Database=(.+?);.*$/", "\\1", $value);
