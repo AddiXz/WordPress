@@ -21,9 +21,6 @@
 // if you don't know the exact key name:    
 $value=current(array_filter($_SERVER,function($k){return strpos($k,"MYSQLCONNSTR_")!==false;},ARRAY_FILTER_USE_KEY));
 
-// if you do know the exact key name:
-$value=$_SERVER["MYSQLCONNSTR_defaultConnection"];
-
 // echo "TEST: $value<br>";
 // my regex pattern returns all values in order between equals and semicolons
 if(preg_match_all("/(?<==)[^;]+/",$value,$captured)){
