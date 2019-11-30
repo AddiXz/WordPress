@@ -24,7 +24,13 @@ $connectstr_dbname = '';
 $connectstr_dbusername = '';
 $connectstr_dbpassword = '';
 
-$value = getenv('CUSTOMCONNSTR_defaultConnection');
+foreach ($_SERVER as $key => $value) {
+    echo $key ;
+ if (strpos($key, "MYSQLCONNSTR_defaultConnection") !== 0) {
+ continue;
+ }
+	
+// $value = getenv('CUSTOMCONNSTR_defaultConnection');
     
     $connectstr_dbhost = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
     $connectstr_dbname = preg_replace("/^.*Database=(.+?);.*$/", "\\1", $value);
