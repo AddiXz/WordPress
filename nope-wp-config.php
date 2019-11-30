@@ -18,18 +18,6 @@
  * @package WordPress
  */
 
-// if you don't know the exact key name:    
-$value=current(array_filter($_SERVER,function($k){return strpos($k,"MYSQLCONNSTR_")!==false;},ARRAY_FILTER_USE_KEY));
-
-// echo "TEST: $value<br>";
-// my regex pattern returns all values in order between equals and semicolons
-if(preg_match_all("/(?<==)[^;]+/",$value,$captured)){
-    //var_export($captured[0]);
-    list($db,$host,$user,$pass)=$captured[0];
-}else{
-    echo "Error extracting DB info with preg_match";
-}
-
 $connectstr_dbhost = '';
 $connectstr_dbname = '';
 $connectstr_dbusername = '';
